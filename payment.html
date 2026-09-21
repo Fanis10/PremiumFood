@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
+	<title>Страница оплаты</title>
+</head>
+
+
+<body style="background: #FDFCF9">
+	<div class="wrapper">
+		<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-icon">
+                   <img src="img/logo.svg" alt="">
+                </span>
+                <span class="header__logo-desc">
+                    <span class="header__logo-text">premium<span>food</span>supplements</span>
+                    <span class="header__logo-text2">Nutrition, refined</span>
+                </span>
+            </a>
+            <div class="header__menu">
+                <ul class="header__list">
+                    <li><a href="catalog.html">Shop</a></li>
+                    <li><a href="catalog.html">Vitamins</a></li>
+                    <li><a href="catalog.html">Supplements</a></li>
+                    <li><a href="catalog.html">Wellness</a></li>
+                    <li><a href="catalog.html">About</a></li>
+                </ul>
+            </div>
+            <div class="header__group">
+                <div class="header__search">
+                    <input type="search" placeholder="Search">
+                    <button class="header__search-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6029 17.6029L13.965 13.965" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.22053 15.9265C12.9241 15.9265 15.9264 12.9241 15.9264 9.22059C15.9264 5.51703 12.9241 2.51471 9.22053 2.51471C5.51697 2.51471 2.51465 5.51703 2.51465 9.22059C2.51465 12.9241 5.51697 15.9265 9.22053 15.9265Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="header__search-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="#0F1F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6 6L18 18" stroke="#0F1F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+                <a href="" class="header__user">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9265 17.6029V15.9265C15.9265 15.0372 15.5732 14.1844 14.9444 13.5556C14.3156 12.9268 13.4628 12.5735 12.5735 12.5735H7.5441C6.65485 12.5735 5.80201 12.9268 5.17322 13.5556C4.54442 14.1844 4.19116 15.0372 4.19116 15.9265V17.6029" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0589 9.22059C11.9107 9.22059 13.4118 7.71943 13.4118 5.86765C13.4118 4.01587 11.9107 2.51471 10.0589 2.51471C8.2071 2.51471 6.70593 4.01587 6.70593 5.86765C6.70593 7.71943 8.2071 9.22059 10.0589 9.22059Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="basket.html" class="header__basket">
+                    <span class="header__basket-icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4118 8.38235C13.4118 9.27161 13.0586 10.1244 12.4298 10.7532C11.801 11.382 10.9481 11.7353 10.0589 11.7353C9.16962 11.7353 8.31678 11.382 7.68799 10.7532C7.05919 10.1244 6.70593 9.27161 6.70593 8.38235" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.60107 5.05791H17.5166" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.84994 4.58263C2.6323 4.87282 2.51465 5.22578 2.51465 5.58851V16.7647C2.51465 17.2093 2.69128 17.6357 3.00568 17.9501C3.32007 18.2645 3.74649 18.4412 4.19112 18.4412H15.9264C16.371 18.4412 16.7975 18.2645 17.1119 17.9501C17.4263 17.6357 17.6029 17.2093 17.6029 16.7647V5.58851C17.6029 5.22578 17.4852 4.87282 17.2676 4.58263L15.5911 2.34706C15.435 2.13885 15.2325 1.96985 14.9997 1.85346C14.7669 1.73707 14.5102 1.67647 14.2499 1.67647H5.86759C5.60733 1.67647 5.35064 1.73707 5.11785 1.85346C4.88506 1.96985 4.68257 2.13885 4.52641 2.34706L2.84994 4.58263Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="header__basket-number">2</span>
+                </a>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="content">
+			<section class="basket basket--2">
+				<div class="container">
+					<div class="basket__inner">
+						<div class="basket__top">
+							<div class="basket__subtitle">Secure checkout</div>
+							<div class="basket__subgroup">
+								<h1 class="basket__title">Your order</h1>
+								<div class="basket__secure">
+									<span class="basket__secure-icon">
+										<img src="img/secure-icon.svg" alt="">
+									</span>
+									<span class="basket__secure-text">Encrypted & secure</span>
+								</div>
+							</div>
+						</div>
+						<div class="basket__wrap">
+							<div class="basket__group">
+								<div class="basket__subgroup2">
+									<div class="basket__subtitle2">Shopping Cart</div>
+									<div class="basket__number">4 items</div>
+								</div>
+								<div class="basket__cards">
+									<div class="basket-card">
+										<div class="basket-card__img">
+											<img src="img/basket-img.webp" alt="">
+										</div>
+										<div class="basket-card__desc">
+											<div class="basket-card__group">
+												<div class="basket-card__subtitle">NOW Foods</div>
+												<div class="basket-card__title">Magnesium Citrate</div>
+												<div class="basket-card__text">120 Veg Capsules</div>
+												<div class="basket-card__price basket-card__price-each">
+													8.20 each
+												</div>
+											</div>
+											<div class="basket-card__group2">
+												<div class="calc">
+													<div class="calc-minus">
+														<img src="img/minus3.svg" alt="">
+													</div>
+													<input type="text" value="1">
+													<div class="calc-plus">
+														<img src="img/plus3.svg" alt="">
+													</div>
+												</div>
+												<div class="basket-card__price basket-card__price--mob">
+													$8.20
+												</div>
+											</div>
+											<div class="basket-card__price">
+												<span>$8.20 each</span>
+												$8.20
+											</div>
+											<button class="basket-card__delete">
+												<img src="img/delete.svg" alt="">
+											</button>
+										</div>
+									</div>
+									<div class="basket-card">
+										<div class="basket-card__img">
+											<img src="img/basket-img.webp" alt="">
+										</div>
+										<div class="basket-card__desc">
+											<div class="basket-card__group">
+												<div class="basket-card__subtitle">NOW Foods</div>
+												<div class="basket-card__title">Magnesium Citrate</div>
+												<div class="basket-card__text">120 Veg Capsules</div>
+												<div class="basket-card__price basket-card__price-each">
+													8.20 each
+												</div>
+											</div>
+											<div class="basket-card__group2">
+												<div class="calc">
+													<div class="calc-minus">
+														<img src="img/minus3.svg" alt="">
+													</div>
+													<input type="text" value="1">
+													<div class="calc-plus">
+														<img src="img/plus3.svg" alt="">
+													</div>
+												</div>
+												<div class="basket-card__price basket-card__price--mob">
+													$8.20
+												</div>
+											</div>
+											<div class="basket-card__price">
+												<span>$8.20 each</span>
+												$8.20
+											</div>
+											<button class="basket-card__delete">
+												<img src="img/delete.svg" alt="">
+											</button>
+										</div>
+									</div>
+									<div class="basket-card">
+										<div class="basket-card__img">
+											<img src="img/basket-img.webp" alt="">
+										</div>
+										<div class="basket-card__desc">
+											<div class="basket-card__group">
+												<div class="basket-card__subtitle">NOW Foods</div>
+												<div class="basket-card__title">Magnesium Citrate</div>
+												<div class="basket-card__text">120 Veg Capsules</div>
+												<div class="basket-card__price basket-card__price-each">
+													8.20 each
+												</div>
+											</div>
+											<div class="basket-card__group2">
+												<div class="calc">
+													<div class="calc-minus">
+														<img src="img/minus3.svg" alt="">
+													</div>
+													<input type="text" value="1">
+													<div class="calc-plus">
+														<img src="img/plus3.svg" alt="">
+													</div>
+												</div>
+												<div class="basket-card__price basket-card__price--mob">
+													$8.20
+												</div>
+											</div>
+											<div class="basket-card__price">
+												<span>$8.20 each</span>
+												$8.20
+											</div>
+											<button class="basket-card__delete">
+												<img src="img/delete.svg" alt="">
+											</button>
+										</div>
+									</div>
+									<div class="basket-card">
+										<div class="basket-card__img">
+											<img src="img/basket-img.webp" alt="">
+										</div>
+										<div class="basket-card__desc">
+											<div class="basket-card__group">
+												<div class="basket-card__subtitle">NOW Foods</div>
+												<div class="basket-card__title">Magnesium Citrate</div>
+												<div class="basket-card__text">120 Veg Capsules</div>
+												<div class="basket-card__price basket-card__price-each">
+													8.20 each
+												</div>
+											</div>
+											<div class="basket-card__group2">
+												<div class="calc">
+													<div class="calc-minus">
+														<img src="img/minus3.svg" alt="">
+													</div>
+													<input type="text" value="1">
+													<div class="calc-plus">
+														<img src="img/plus3.svg" alt="">
+													</div>
+												</div>
+												<div class="basket-card__price basket-card__price--mob">
+													$8.20
+												</div>
+											</div>
+											<div class="basket-card__price">
+												<span>$8.20 each</span>
+												$8.20
+											</div>
+											<button class="basket-card__delete">
+												<img src="img/delete.svg" alt="">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="basket__group2">
+								<div class="basket__subtitle">Buying option</div>
+								<div class="basket__title2">Order Summary</div>
+								<ul class="basket__list">
+									<li>
+										<span>Quantity</span>
+										<span>4 items</span>
+									</li>
+									<li>
+										<span>Subtotal</span>
+										<span>$42.80</span>
+									</li>
+									<li>
+										<span>Shipping</span>
+										<span>Free</span>
+									</li>
+								</ul>
+								<div class="total">
+									<div class="total__title">Total</div>
+									<div class="total__price-wrap">
+										<div class="total__price">$<span>42.80</span></div>
+										<div class="total__price-text">USD</div>
+									</div>
+								</div>
+								<button class="basket__btn btn btn-green2">
+									<span class="btn-icon">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.00065 11.3333C8.36884 11.3333 8.66732 11.0349 8.66732 10.6667C8.66732 10.2985 8.36884 10 8.00065 10C7.63246 10 7.33398 10.2985 7.33398 10.6667C7.33398 11.0349 7.63246 11.3333 8.00065 11.3333Z" stroke="#FDFCF8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M12.6667 6.66669H3.33333C2.59695 6.66669 2 7.26364 2 8.00002V13.3334C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3334V8.00002C14 7.26364 13.403 6.66669 12.6667 6.66669Z" stroke="#FDFCF8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M4.66602 6.66665V4.66665C4.66602 3.78259 5.01721 2.93475 5.64233 2.30962C6.26745 1.6845 7.11529 1.33331 7.99935 1.33331C8.8834 1.33331 9.73125 1.6845 10.3564 2.30962C10.9815 2.93475 11.3327 3.78259 11.3327 4.66665V6.66665" stroke="#FDFCF8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+									<span class="btn-text">PROCEED TO PAYMENT</span>
+								</button>
+								<div class="basket__info">
+									<span class="basket__info-text">Taxes included where applicable. Secure checkout.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="payment">
+				<div class="container">
+					<div class="payment__inner">
+						<div class="payment__wrap">
+							<div class="step step--1">
+								<div class="step__top">
+									<div class="step__number">1</div>
+									<div class="step__group">
+										<div class="step__title">Contact & Billing Information</div>
+										<div class="step__text">Used for your receipt and delivery updates</div>
+									</div>
+								</div>
+								<div class="step__form">
+									<div class="step__form-group">
+										<span class="input-title">Full Name</span>
+										<input type="text" placeholder="Your full name">
+									</div>
+									<div class="step__form-group">
+										<span class="input-title">Phone</span>
+										<input type="tel" placeholder="+1 555 000 0000">
+									</div>
+									<div class="step__form-group form-group--big">
+										<span class="input-title">Billing Address</span>
+										<input type="text" placeholder="Street address">
+									</div>
+									<div class="step__form-group">
+										<span class="input-title">ZIP / Postal Code</span>
+										<input type="text" placeholder="Postal code">
+									</div>
+									<div class="step__form-group">
+										<span class="input-title">State / Region</span>
+										<input type="text" placeholder="State or region">
+									</div>
+									<div class="step__form-select">
+										<span class="input-title">Country</span>
+										<select class="select">
+											<option value="">United States</option>
+											<option value="">United States</option>
+											<option value="">United States</option>
+											<option value="">United States</option>
+											<option value="">United States</option>
+										</select>
+									</div>
+									<div class="step__form-group">
+										<span class="input-title">Email</span>
+										<input type="email" placeholder="you@example.com">
+									</div>
+								</div>
+							</div>
+							<div class="step step--2">
+								<div class="step__top">
+									<div class="step__number">2</div>
+									<div class="step__group">
+										<div class="step__title">Payment Information</div>
+										<div class="step__text">Choose how you would like to pay</div>
+									</div>
+								</div>
+<!--								<div class="step__checkboxes">-->
+<!--									<div class="step__checkbox">-->
+<!--										<input type="radio" name="radio">-->
+<!--										<label>-->
+<!--											<span class="step__checkbox-icon">-->
+<!--												<img src="img/card.svg" alt="">-->
+<!--											</span>-->
+<!--											<span class="step__checkbox-title">Credit Card</span>-->
+<!--										</label>-->
+<!--									</div>-->
+<!--									<div class="step__checkbox">-->
+<!--										<input type="radio" name="radio">-->
+<!--										<label>-->
+<!--											<span class="step__checkbox-icon">-->
+<!--												<img src="img/paypal.svg" alt="">-->
+<!--											</span>-->
+<!--											<span class="step__checkbox-title">PayPal</span>-->
+<!--										</label>-->
+<!--									</div>-->
+<!--									<div class="step__checkbox">-->
+<!--										<input type="radio" name="radio">-->
+<!--										<label>-->
+<!--											<span class="step__checkbox-icon">-->
+<!--												<img src="img/applepay.svg" alt="">-->
+<!--											</span>-->
+<!--											<span class="step__checkbox-title">Apple Pay</span>-->
+<!--										</label>-->
+<!--									</div>-->
+<!--								</div>-->
+								<div class="step__form">
+									<div class="step__form-grid">
+										<div class="step__form-group">
+											<span class="input-title">Cardholder Name</span>
+											<input type="text" placeholder="Ivan">
+										</div>
+										<div class="step__form-group">
+											<span class="input-title">Card Number</span>
+											<input type="text" placeholder="0000 0000 0000 0000">
+										</div>
+										<div class="step__form-select">
+											<span class="input-title">Expiration Month</span>
+											<select class="select">
+												<option value="">Month</option>
+												<option value="">Month</option>
+												<option value="">Month</option>
+												<option value="">Month</option>
+												<option value="">Month</option>
+											</select>
+										</div>
+										<div class="step__form-select">
+											<span class="input-title">Expiration Year</span>
+											<select class="select">
+												<option value="">Year</option>
+												<option value="">Year</option>
+												<option value="">Year</option>
+												<option value="">Year</option>
+												<option value="">Year</option>
+											</select>
+										</div>
+										<div class="step__form-select form-select--big">
+											<span class="input-title">Card Type</span>
+											<select class="select">
+												<option value="">Visa</option>
+												<option value="">Visa</option>
+												<option value="">Visa</option>
+												<option value="">Visa</option>
+												<option value="">Visa</option>
+											</select>
+										</div>
+										<div class="step__form-group">
+											<span class="input-title">CVV / CVC</span>
+											<input type="password" placeholder="•••">
+										</div>
+									</div>
+									<div class="step__form-check">
+										<input type="checkbox">
+										<label>I agree to the <a href="" class="terms">Terms of Service</a> and acknowledge the <a href="" class="privacy">Privacy Policy.</a></label>
+									</div>
+								</div>
+								<div class="payment__total">
+									<div class="payment__total-group">
+										<div class="payment__total-title">Total to pay</div>
+										<div class="total-price__wrap">
+											<div class="total-price">$<span>42.80</span></div>
+											<div class="total-price__text">USD</div>
+										</div>
+									</div>
+									<button class="payment__total-btn btn btn-green2">
+										<span class="btn-icon">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.00065 11.3333C8.36884 11.3333 8.66732 11.0349 8.66732 10.6667C8.66732 10.2985 8.36884 10 8.00065 10C7.63246 10 7.33398 10.2985 7.33398 10.6667C7.33398 11.0349 7.63246 11.3333 8.00065 11.3333Z" stroke="#FDFCF8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M12.6667 6.66663H3.33333C2.59695 6.66663 2 7.26358 2 7.99996V13.3333C2 14.0697 2.59695 14.6666 3.33333 14.6666H12.6667C13.403 14.6666 14 14.0697 14 13.3333V7.99996C14 7.26358 13.403 6.66663 12.6667 6.66663Z" stroke="#FDFCF8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M4.66602 6.66671V4.66671C4.66602 3.78265 5.01721 2.93481 5.64233 2.30968C6.26745 1.68456 7.11529 1.33337 7.99935 1.33337C8.8834 1.33337 9.73125 1.68456 10.3564 2.30968C10.9815 2.93481 11.3327 3.78265 11.3327 4.66671V6.66671" stroke="#FDFCF8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</span>
+										<span class="btn-text">PAY NOW</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages2 advantages2--2">
+				<div class="container">
+					<div class="advantages2__inner">
+						<div class="advantages2__items">
+							<div class="advantages2__item">
+								<div class="advantages2__item-wrap">
+									<div class="advantages2__item-icon">
+										<img src="img/advantages2-icon.svg" alt="">
+									</div>
+									<div class="advantages2__item-desc">
+										<div class="advantages2__item-title">Secure payment</div>
+										<div class="advantages2__item-text">Your details are encrypted</div>
+									</div>
+								</div>
+							</div>
+							<div class="advantages2__item">
+								<div class="advantages2__item-wrap">
+									<div class="advantages2__item-icon">
+										<img src="img/advantages2-icon2.svg" alt="">
+									</div>
+									<div class="advantages2__item-desc">
+										<div class="advantages2__item-title">Tracked delivery</div>
+										<div class="advantages2__item-text">Updates from door to door</div>
+									</div>
+								</div>
+							</div>
+							<div class="advantages2__item">
+								<div class="advantages2__item-wrap">
+									<div class="advantages2__item-icon">
+										<img src="img/advantages2-icon3.svg" alt="">
+									</div>
+									<div class="advantages2__item-desc">
+										<div class="advantages2__item-title">Easy returns</div>
+										<div class="advantages2__item-text">30-day return window</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer-top">
+                <div class="footer__group">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">
+                            <img src="img/logo2.svg" alt="">
+                        </span>
+                        <span class="footer__logo-desc">
+                            <span class="footer__logo-text">premium<span>food</span>supplements</span>
+                            <span class="footer__logo-text2">Nutrition, refined</span>
+                        </span>
+                    </a>
+                    <div class="footer__text">Clean, clinically dosed food supplements made in small European batches.</div>
+                    <a href="tel:+441138418480" class="footer__phone">+44 113 841 8480</a>
+                </div>
+                <div class="footer__items">
+                    <div class="footer__group footer__group--mob">
+                        <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">
+                            <img src="img/logo2.svg" alt="">
+                        </span>
+                            <span class="footer__logo-desc">
+                            <span class="footer__logo-text">premium<span>food</span>supplements</span>
+                            <span class="footer__logo-text2">Nutrition, refined</span>
+                        </span>
+                        </a>
+                        <div class="footer__text">Clean, clinically dosed food supplements made in small European batches.</div>
+                        <a href="tel:+441138418480" class="footer__phone">+44 113 841 8480</a>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">Shop</div>
+                        <ul class="footer__item-list">
+                            <li><a href="catalog.html">Vitamins</a></li>
+                            <li><a href="catalog.html">Supplements</a></li>
+                            <li><a href="catalog.html">Bundles</a></li>
+                            <li><a href="catalog.html">Gift cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">Help</div>
+                        <ul class="footer__item-list">
+                            <li><a href="contacts.html">Contact Us</a></li>
+                            <li><a href="refund-policy.html">Return/refund policy</a></li>
+                            <li><a href="delivery-policy.html">Delivery information</a></li>
+                            <li><a href="support.html">Customer Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">About</div>
+                        <ul class="footer__item-list">
+                            <li><a href="catalog.html">Our story</a></li>
+                            <li><a href="catalog.html">Ingredients</a></li>
+                            <li><a href="catalog.html">Lab reports</a></li>
+                            <li><a href="catalog.html">Journal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer__items2">
+                    <div class="footer__item2">VISA</div>
+                    <div class="footer__item2">MASTERCARD</div>
+                    <div class="footer__item2">visa secure</div>
+                </div>
+                <div class="footer__text2">
+                    <p>© 2026 premiumfoodsupplements</p>
+                    <p><a href="privacy-policy.html">Privacy</a></p>
+                    <p><a href="terms-use.html">Terms</a></p>
+                    <p><a href="terms-use.html">Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	</div>
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+
+</body>
+
+</html>

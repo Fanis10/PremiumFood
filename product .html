@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
+	<title>Карточка товара</title>
+</head>
+
+
+<body style="background: #FEFDFB">
+	<div class="wrapper">
+		<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-icon">
+                   <img src="img/logo.svg" alt="">
+                </span>
+                <span class="header__logo-desc">
+                    <span class="header__logo-text">premium<span>food</span>supplements</span>
+                    <span class="header__logo-text2">Nutrition, refined</span>
+                </span>
+            </a>
+            <div class="header__menu">
+                <ul class="header__list">
+                    <li><a href="catalog.html">Shop</a></li>
+                    <li><a href="catalog.html">Vitamins</a></li>
+                    <li><a href="catalog.html">Supplements</a></li>
+                    <li><a href="catalog.html">Wellness</a></li>
+                    <li><a href="catalog.html">About</a></li>
+                </ul>
+            </div>
+            <div class="header__group">
+                <div class="header__search">
+                    <input type="search" placeholder="Search">
+                    <button class="header__search-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6029 17.6029L13.965 13.965" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.22053 15.9265C12.9241 15.9265 15.9264 12.9241 15.9264 9.22059C15.9264 5.51703 12.9241 2.51471 9.22053 2.51471C5.51697 2.51471 2.51465 5.51703 2.51465 9.22059C2.51465 12.9241 5.51697 15.9265 9.22053 15.9265Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="header__search-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="#0F1F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6 6L18 18" stroke="#0F1F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+                <a href="" class="header__user">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9265 17.6029V15.9265C15.9265 15.0372 15.5732 14.1844 14.9444 13.5556C14.3156 12.9268 13.4628 12.5735 12.5735 12.5735H7.5441C6.65485 12.5735 5.80201 12.9268 5.17322 13.5556C4.54442 14.1844 4.19116 15.0372 4.19116 15.9265V17.6029" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0589 9.22059C11.9107 9.22059 13.4118 7.71943 13.4118 5.86765C13.4118 4.01587 11.9107 2.51471 10.0589 2.51471C8.2071 2.51471 6.70593 4.01587 6.70593 5.86765C6.70593 7.71943 8.2071 9.22059 10.0589 9.22059Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="basket.html" class="header__basket">
+                    <span class="header__basket-icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4118 8.38235C13.4118 9.27161 13.0586 10.1244 12.4298 10.7532C11.801 11.382 10.9481 11.7353 10.0589 11.7353C9.16962 11.7353 8.31678 11.382 7.68799 10.7532C7.05919 10.1244 6.70593 9.27161 6.70593 8.38235" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.60107 5.05791H17.5166" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.84994 4.58263C2.6323 4.87282 2.51465 5.22578 2.51465 5.58851V16.7647C2.51465 17.2093 2.69128 17.6357 3.00568 17.9501C3.32007 18.2645 3.74649 18.4412 4.19112 18.4412H15.9264C16.371 18.4412 16.7975 18.2645 17.1119 17.9501C17.4263 17.6357 17.6029 17.2093 17.6029 16.7647V5.58851C17.6029 5.22578 17.4852 4.87282 17.2676 4.58263L15.5911 2.34706C15.435 2.13885 15.2325 1.96985 14.9997 1.85346C14.7669 1.73707 14.5102 1.67647 14.2499 1.67647H5.86759C5.60733 1.67647 5.35064 1.73707 5.11785 1.85346C4.88506 1.96985 4.68257 2.13885 4.52641 2.34706L2.84994 4.58263Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="header__basket-number">2</span>
+                </a>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="content">
+			<section class="breadcrumbs">
+				<div class="container">
+					<div class="breadcrumbs__inner">
+						<div class="breadcrumbs__items">
+							<a class="breadcrumbs__item" href="">
+								<span class="breadcrumbs__item-text">Shop</span>
+								<span class="breadcrumbs__item-arrow">
+									<svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.5 6.5L3.5 3.5L0.5 0.5" stroke="#606D60" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+							</a>
+							<a class="breadcrumbs__item" href="">
+								<span class="breadcrumbs__item-text">Minerals</span>
+								<span class="breadcrumbs__item-arrow">
+									<svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.5 6.5L3.5 3.5L0.5 0.5" stroke="#606D60" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+							</a>
+							<div class="breadcrumbs__item breadcrumbs__item-active">
+								<span class="breadcrumbs__item-text">Magnesium Citrate</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product-main">
+				<div class="container">
+					<div class="product-main__inner">
+						<div class="product-main__slider">
+							<div class="slider__big">
+								<div class="swiper mySwiper2">
+									<div class="swiper-wrapper">
+										<a class="swiper-slide" data-fancybox="gallery" href="img/product-main__img.webp">
+											<img src="img/product-main__img.webp" alt="">
+										</a>
+										<a class="swiper-slide" data-fancybox="gallery" href="img/product-main__img.webp">
+											<img src="img/product-main__img.webp" alt="">
+										</a>
+										<a class="swiper-slide" data-fancybox="gallery" href="img/product-main__img.webp">
+											<img src="img/product-main__img.webp" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="product-main__tag bestseller">Bestseller</div>
+								<button class="product-card__favorite">
+									<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.666992 4.3441C0.667006 3.60223 0.892054 2.87782 1.31241 2.26654C1.73277 1.65526 2.32867 1.18587 3.0214 0.920366C3.71413 0.65486 4.4711 0.605729 5.19233 0.779462C5.91357 0.953196 6.56514 1.34162 7.06099 1.89343C7.09592 1.93078 7.13814 1.96055 7.18504 1.9809C7.23195 2.00125 7.28253 2.01176 7.33366 2.01176C7.38479 2.01176 7.43537 2.00125 7.48228 1.9809C7.52918 1.96055 7.5714 1.93078 7.60633 1.89343C8.10062 1.33803 8.75234 0.946345 9.47475 0.770501C10.1972 0.594657 10.956 0.642997 11.6502 0.909089C12.3445 1.17518 12.9412 1.6464 13.3611 2.26003C13.7809 2.87367 14.0039 3.60061 14.0003 4.3441C14.0003 5.87077 13.0003 7.01077 12.0003 8.01077L8.33899 11.5528C8.21477 11.6954 8.06161 11.81 7.88969 11.889C7.71777 11.9679 7.53102 12.0093 7.34185 12.0105C7.15268 12.0117 6.96542 11.9727 6.79252 11.8959C6.61961 11.8192 6.46501 11.7065 6.33899 11.5654L2.66699 8.01077C1.66699 7.01077 0.666992 5.87743 0.666992 4.3441Z" stroke="#061809" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</button>
+							</div>
+							<div class="slider__small">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="img/product-main__img.webp" alt="">
+										</div>
+										<div class="swiper-slide">
+											<img src="img/product-main__img.webp" alt="">
+										</div>
+										<div class="swiper-slide">
+											<img src="img/product-main__img.webp" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-main__desc">
+							<div class="product-main__subtitle">NOW Foods</div>
+							<h1 class="product-main__title">NOW Foods Magnesium Citrate, 120 VCaps</h1>
+							<div class="stars-wrap">
+								<div class="stars">
+									<span class="star">
+										<img src="img/star2.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star2.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star2.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star2.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star2.svg" alt="">
+									</span>
+								</div>
+								<div class="stars-number">4.9</div>
+								<div class="stars-text">
+									(<span>438</span> reviews)
+								</div>
+							</div>
+							<ul class="product-main__list">
+								<li>10% discount on all subsequent purchases</li>
+								<li>FREE Shipping Worldwide</li>
+								<li>24x7 Support</li>
+								<li>Participation in the 'Favorite buyer", which gives a 15% discount (when the sum of previous purchases exceed $ 500)</li>
+							</ul>
+							<div class="product-main__group">
+								<div class="product-main__subgroup">
+									<div class="product-main__price">$8.20</div>
+									<div class="product-main__price-add">$<span>0.07</span> / capsule</div>
+								</div>
+								<div class="product-main__info">In stock</div>
+							</div>
+							<div class="product-main__checkboxes">
+								<div class="product-main__checkboxes-title">Choose size</div>
+								<div class="product-main__checkboxes-grid">
+									<div class="product-main__checkbox">
+										<input type="radio" name="radio">
+										<label>
+											<span class="product-main__checkbox-title">120 capsules</span>
+											<span class="product-main__checkbox-price">$<span>8.20</span></span>
+											<span class="check-icon">
+												<img src="img/check3.svg" alt="">
+											</span>
+										</label>
+									</div>
+									<div class="product-main__checkbox">
+										<input type="radio" name="radio">
+										<label>
+											<span class="product-main__checkbox-title">180 capsules</span>
+											<span class="product-main__checkbox-price">$<span>11.90</span> · Best value</span>
+											<span class="check-icon">
+												<img src="img/check3.svg" alt="">
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="product-main__group2">
+								<div class="calc">
+									<div class="calc-minus">
+										<img src="img/minus.svg" alt="">
+									</div>
+									<input type="text" value="1">
+									<div class="calc-plus">
+										<img src="img/plus.svg" alt="">
+									</div>
+								</div>
+								<button class="product-main__btn btn btn-green2">
+									<span class="btn-icon">
+										<img src="img/basket2.svg" alt="">
+									</span>
+									<span class="btn-text">Add to cart · $<span>8.20</span></span>
+								</button>
+							</div>
+							<button class="product-main__btn2 btn btn-green__outline">
+								<span class="btn-text">Buy now</span>
+							</button>
+							<div class="product-main__items">
+								<div class="product-main__item">
+									<div class="product-main__item-icon">
+										<img src="img/product-main__icon.svg" alt="">
+									</div>
+									<div class="product-main__item-desc">
+										<div class="product-main__item-title">Free delivery over $50</div>
+										<div class="product-main__item-text">Ships in 1–2 business days</div>
+									</div>
+								</div>
+								<div class="product-main__item">
+									<div class="product-main__item-icon">
+										<img src="img/product-main__icon2.svg" alt="">
+									</div>
+									<div class="product-main__item-desc">
+										<div class="product-main__item-title">30-day returns</div>
+										<div class="product-main__item-text">Simple, worry-free returns</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="container">
+					<div class="advantages__inner">
+						<div class="advantages__items">
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img src="img/advantages-icon.svg" alt="">
+								</div>
+								<div class="advantages__item-desc">
+									<div class="advantages__item-title">Vegan formula</div>
+									<div class="advantages__item-text">Plant-based capsules</div>
+								</div>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img src="img/advantages-icon2.svg" alt="">
+								</div>
+								<div class="advantages__item-desc">
+									<div class="advantages__item-title">Clean ingredients</div>
+									<div class="advantages__item-text">Non-GMO & gluten-free</div>
+								</div>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img src="img/advantages-icon3.svg" alt="">
+								</div>
+								<div class="advantages__item-desc">
+									<div class="advantages__item-title">Small batches</div>
+									<div class="advantages__item-text">Quality tested in Europe</div>
+								</div>
+							</div>
+							<div class="advantages__item">
+								<div class="advantages__item-icon">
+									<img src="img/advantages-icon4.svg" alt="">
+								</div>
+								<div class="advantages__item-desc">
+									<div class="advantages__item-title">Fast dispatch</div>
+									<div class="advantages__item-text">Packed with care</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="container">
+					<div class="about__inner">
+						<div class="text">
+							<h4>Product details</h4>
+							<h2>About</h2>
+							<h3>Nervous System Support*</h3>
+							<h3>Supports Energy Production*</h3>
+							<h3>Critical for Enzyme Function*</h3>
+							<h3>Vegan/Vegetarian Formula</h3>
+							<p>Magnesium is a mineral that is critical for energy production and metabolism, muscle contraction, nerve impulse transmission, and bone mineralization. It is a required cofactor for an estimated 300 enzymes. Among the reactions catalyzed by these enzymes are fatty acid synthesis, protein synthesis, and glucose metabolism. Magnesium status is also important for regulation of calcium balance through its effects on the parathyroid gland. Magnesium Citrate is more easily digested and better absorbed than other forms of magnesium.*</p>
+						</div>
+						<div class="text">
+							<h3>120 VCaps</h3>
+							<p>
+								Serving Size: 3 Veg Capsules <br>
+								Servings Per Container: 40
+							</p>
+							<ul>
+								<li>
+									<strong>Amount Per Serving</strong>
+									<strong>
+										<span>%DV</span>
+										<span>Amt</span>
+									</strong>
+								</li>
+								<li>
+									<strong>Magnesium (from Magnesium Citrate)</strong>
+									<strong>
+										<span>400mg</span>
+										<span>95%</span>
+									</strong>
+								</li>
+							</ul>
+							<p>
+								* % Daily Value is based on a 2,000 calorie diet. Your daily values may be higher or lower based on your calorie needs. <br>
+								† Daily Value (DV) not established.
+							</p>
+							<h3>Ingredients</h3>
+							<p>
+								Cellulose (capsule), Magnesium Stearate (vegetable source) and Silica. <br>
+								Take 3 capsules daily, preferably in divided doses with food. <br>
+								For adults only. Consult physician if pregnant/nursing, taking medication, or have a medical condition. KEEP OUT OF REACH OF CHILDREN.
+							</p>
+							<h3>Directions</h3>
+							<h3>Warnings</h3>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feedback2">
+				<div class="container">
+					<div class="feedback2__inner">
+						<div class="feedback2__group">
+							<div class="feedback2__title">Customer reviews</div>
+							<div class="stars-number">
+								4.9
+								<span>out of 5</span>
+							</div>
+							<div class="stars">
+								<span class="star"><img src="img/star2.svg" alt=""></span>
+								<span class="star"><img src="img/star2.svg" alt=""></span>
+								<span class="star"><img src="img/star2.svg" alt=""></span>
+								<span class="star"><img src="img/star2.svg" alt=""></span>
+								<span class="star"><img src="img/star2.svg" alt=""></span>
+							</div>
+							<div class="stars-text">Based on 438 verified reviews</div>
+							<div class="statistics">
+								<div class="statistics__item">
+									<div class="statistics__number">5</div>
+									<div class="statistics__slider"><span style="width: 88%"></span></div>
+									<div class="statistics__percent">88%</div>
+								</div>
+								<div class="statistics__item">
+									<div class="statistics__number">4</div>
+									<div class="statistics__slider"><span style="width: 9%"></span></div>
+									<div class="statistics__percent">9%</div>
+								</div>
+								<div class="statistics__item">
+									<div class="statistics__number">3</div>
+									<div class="statistics__slider"><span style="width: 2%"></span></div>
+									<div class="statistics__percent">2%</div>
+								</div>
+								<div class="statistics__item">
+									<div class="statistics__number">2</div>
+									<div class="statistics__slider"><span style="width: 1%"></span></div>
+									<div class="statistics__percent">1%</div>
+								</div>
+								<div class="statistics__item">
+									<div class="statistics__number">1</div>
+									<div class="statistics__slider"><span style="width: 0%;"></span></div>
+									<div class="statistics__percent">0%</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback2__cards">
+							<div class="feedback2-card">
+								<div class="stars">
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+								</div>
+								<div class="feedback2-card__title">“A staple in my routine”</div>
+								<div class="feedback2-card__text">Gentle, easy to take and noticeably helpful for evening relaxation. The clean ingredient list is exactly what I was looking for.</div>
+								<div class="feedback2-card__user">Emily R. · Verified buyer</div>
+							</div>
+							<div class="feedback2-card">
+								<div class="stars">
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+									<span class="star"><img src="img/star2.svg" alt=""></span>
+								</div>
+								<div class="feedback2-card__title">“Simple and effective”</div>
+								<div class="feedback2-card__text">Excellent value and no unnecessary fillers. Delivery was quick and the packaging felt considered.</div>
+								<div class="feedback2-card__user">Daniel K. · Verified buyer</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="products products--2">
+				<div class="container">
+					<div class="products__inner">
+						<div class="section-top">
+							<div class="subtitle">You may also like</div>
+							<div class="section-top__group">
+								<h2 class="products__title text30">Related products</h2>
+								<a href="" class="section-top__link">
+									<span class="section-top__link-text">Shop all</span>
+									<span class="section-top__link-icon">
+										<svg width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.5 6.5L3.5 3.5L0.5 0.5" stroke="#005221" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="products__cards">
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img.webp" alt="">
+									</a>
+									<div class="product-card__tag new">NEW</div>
+									<div class="product-card__favorite">
+										<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.666504 4.34409C0.666518 3.60223 0.891566 2.87781 1.31193 2.26653C1.73229 1.65526 2.32818 1.18586 3.02091 0.920358C3.71364 0.654852 4.47061 0.605722 5.19185 0.779455C5.91308 0.953188 6.56465 1.34161 7.0605 1.89343C7.09543 1.93077 7.13765 1.96054 7.18455 1.98089C7.23146 2.00125 7.28204 2.01175 7.33317 2.01175C7.3843 2.01175 7.43488 2.00125 7.48179 1.98089C7.52869 1.96054 7.57091 1.93077 7.60584 1.89343C8.10013 1.33803 8.75185 0.946337 9.47426 0.770493C10.1967 0.594649 10.9555 0.64299 11.6498 0.909081C12.344 1.17517 12.9408 1.64639 13.3606 2.26003C13.7804 2.87366 14.0034 3.6006 13.9998 4.34409C13.9998 5.87076 12.9998 7.01076 11.9998 8.01076L8.3385 11.5528C8.21428 11.6954 8.06112 11.81 7.8892 11.889C7.71728 11.9679 7.53053 12.0093 7.34136 12.0105C7.15219 12.0117 6.96494 11.9727 6.79203 11.8959C6.61912 11.8192 6.46452 11.7065 6.3385 11.5654L2.6665 8.01076C1.6665 7.01076 0.666504 5.87743 0.666504 4.34409Z" stroke="#0F2816" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Daily Wellness</div>
+									<a href="product%20.html" class="product-card__title">NOW Foods Magnesium Citrate, <span class="inline">120 VCaps</span></a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.9</span>
+											<span>(412)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$8.20</div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img2.webp" alt="">
+									</a>
+									<div class="product-card__favorite">
+										<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.666504 4.34409C0.666518 3.60223 0.891566 2.87781 1.31193 2.26653C1.73229 1.65526 2.32818 1.18586 3.02091 0.920358C3.71364 0.654852 4.47061 0.605722 5.19185 0.779455C5.91308 0.953188 6.56465 1.34161 7.0605 1.89343C7.09543 1.93077 7.13765 1.96054 7.18455 1.98089C7.23146 2.00125 7.28204 2.01175 7.33317 2.01175C7.3843 2.01175 7.43488 2.00125 7.48179 1.98089C7.52869 1.96054 7.57091 1.93077 7.60584 1.89343C8.10013 1.33803 8.75185 0.946337 9.47426 0.770493C10.1967 0.594649 10.9555 0.64299 11.6498 0.909081C12.344 1.17517 12.9408 1.64639 13.3606 2.26003C13.7804 2.87366 14.0034 3.6006 13.9998 4.34409C13.9998 5.87076 12.9998 7.01076 11.9998 8.01076L8.3385 11.5528C8.21428 11.6954 8.06112 11.81 7.8892 11.889C7.71728 11.9679 7.53053 12.0093 7.34136 12.0105C7.15219 12.0117 6.96494 11.9727 6.79203 11.8959C6.61912 11.8192 6.46452 11.7065 6.3385 11.5654L2.6665 8.01076C1.6665 7.01076 0.666504 5.87743 0.666504 4.34409Z" stroke="#0F2816" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Sleep & Recovery</div>
+									<a href="product%20.html" class="product-card__title">NOW Foods Effer-C, Box of 30</a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.9</span>
+											<span>(531)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$10.02</div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img3.webp" alt="">
+									</a>
+									<div class="product-card__tag new">NEW</div>
+									<div class="product-card__favorite">
+										<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.666504 4.34409C0.666518 3.60223 0.891566 2.87781 1.31193 2.26653C1.73229 1.65526 2.32818 1.18586 3.02091 0.920358C3.71364 0.654852 4.47061 0.605722 5.19185 0.779455C5.91308 0.953188 6.56465 1.34161 7.0605 1.89343C7.09543 1.93077 7.13765 1.96054 7.18455 1.98089C7.23146 2.00125 7.28204 2.01175 7.33317 2.01175C7.3843 2.01175 7.43488 2.00125 7.48179 1.98089C7.52869 1.96054 7.57091 1.93077 7.60584 1.89343C8.10013 1.33803 8.75185 0.946337 9.47426 0.770493C10.1967 0.594649 10.9555 0.64299 11.6498 0.909081C12.344 1.17517 12.9408 1.64639 13.3606 2.26003C13.7804 2.87366 14.0034 3.6006 13.9998 4.34409C13.9998 5.87076 12.9998 7.01076 11.9998 8.01076L8.3385 11.5528C8.21428 11.6954 8.06112 11.81 7.8892 11.889C7.71728 11.9679 7.53053 12.0093 7.34136 12.0105C7.15219 12.0117 6.96494 11.9727 6.79203 11.8959C6.61912 11.8192 6.46452 11.7065 6.3385 11.5654L2.6665 8.01076C1.6665 7.01076 0.666504 5.87743 0.666504 4.34409Z" stroke="#0F2816" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Daily Wellness</div>
+									<a href="product%20.html" class="product-card__title">NOW Foods Magnesium Citrate, <span class="inline">120 VCaps</span></a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.9</span>
+											<span>(412)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$8.20</div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="connection connection--2">
+				<div class="container">
+					<div class="connection__inner">
+						<div class="section-top">
+							<div class="subtitle">~ Wellness letter ~</div>
+							<h3 class="connection__title text30">One useful email a month. Plus €10 off your first order.</h3>
+						</div>
+						<div class="form-mail">
+							<div class="form-mail__group">
+								<input type="email" placeholder="your@email.com">
+							</div>
+							<button class="form-mail__btn btn btn-green2">
+								<span class="btn-text">Subscribe</span>
+							</button>
+						</div>
+						<div class="form-mail__info">No noise, no spam. Unsubscribe in one click.</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer-top">
+                <div class="footer__group">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">
+                            <img src="img/logo2.svg" alt="">
+                        </span>
+                        <span class="footer__logo-desc">
+                            <span class="footer__logo-text">premium<span>food</span>supplements</span>
+                            <span class="footer__logo-text2">Nutrition, refined</span>
+                        </span>
+                    </a>
+                    <div class="footer__text">Clean, clinically dosed food supplements made in small European batches.</div>
+                    <a href="tel:+441138418480" class="footer__phone">+44 113 841 8480</a>
+                </div>
+                <div class="footer__items">
+                    <div class="footer__group footer__group--mob">
+                        <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">
+                            <img src="img/logo2.svg" alt="">
+                        </span>
+                            <span class="footer__logo-desc">
+                            <span class="footer__logo-text">premium<span>food</span>supplements</span>
+                            <span class="footer__logo-text2">Nutrition, refined</span>
+                        </span>
+                        </a>
+                        <div class="footer__text">Clean, clinically dosed food supplements made in small European batches.</div>
+                        <a href="tel:+441138418480" class="footer__phone">+44 113 841 8480</a>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">Shop</div>
+                        <ul class="footer__item-list">
+                            <li><a href="catalog.html">Vitamins</a></li>
+                            <li><a href="catalog.html">Supplements</a></li>
+                            <li><a href="catalog.html">Bundles</a></li>
+                            <li><a href="catalog.html">Gift cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">Help</div>
+                        <ul class="footer__item-list">
+                            <li><a href="contacts.html">Contact Us</a></li>
+                            <li><a href="refund-policy.html">Return/refund policy</a></li>
+                            <li><a href="delivery-policy.html">Delivery information</a></li>
+                            <li><a href="support.html">Customer Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">About</div>
+                        <ul class="footer__item-list">
+                            <li><a href="catalog.html">Our story</a></li>
+                            <li><a href="catalog.html">Ingredients</a></li>
+                            <li><a href="catalog.html">Lab reports</a></li>
+                            <li><a href="catalog.html">Journal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer__items2">
+                    <div class="footer__item2">VISA</div>
+                    <div class="footer__item2">MASTERCARD</div>
+                    <div class="footer__item2">visa secure</div>
+                </div>
+                <div class="footer__text2">
+                    <p>© 2026 premiumfoodsupplements</p>
+                    <p><a href="privacy-policy.html">Privacy</a></p>
+                    <p><a href="terms-use.html">Terms</a></p>
+                    <p><a href="terms-use.html">Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	</div>
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+
+</body>
+
+</html>
+
+<style>
+	.breadcrumbs .container {
+		max-width: 1240px;
+	}
+
+	.products--2 .container {
+		max-width: 1240px;
+	}
+</style>

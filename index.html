@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
+	<title>Главная</title>
+</head>
+
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo">
+                <span class="header__logo-icon">
+                   <img src="img/logo.svg" alt="">
+                </span>
+                <span class="header__logo-desc">
+                    <span class="header__logo-text">premium<span>food</span>supplements</span>
+                    <span class="header__logo-text2">Nutrition, refined</span>
+                </span>
+            </a>
+            <div class="header__menu">
+                <ul class="header__list">
+                    <li><a href="catalog.html">Shop</a></li>
+                    <li><a href="catalog.html">Vitamins</a></li>
+                    <li><a href="catalog.html">Supplements</a></li>
+                    <li><a href="catalog.html">Wellness</a></li>
+                    <li><a href="catalog.html">About</a></li>
+                </ul>
+            </div>
+            <div class="header__group">
+                <div class="header__search">
+                    <input type="search" placeholder="Search">
+                    <button class="header__search-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6029 17.6029L13.965 13.965" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.22053 15.9265C12.9241 15.9265 15.9264 12.9241 15.9264 9.22059C15.9264 5.51703 12.9241 2.51471 9.22053 2.51471C5.51697 2.51471 2.51465 5.51703 2.51465 9.22059C2.51465 12.9241 5.51697 15.9265 9.22053 15.9265Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="header__search-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="#0F1F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6 6L18 18" stroke="#0F1F14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+                <a href="" class="header__user">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9265 17.6029V15.9265C15.9265 15.0372 15.5732 14.1844 14.9444 13.5556C14.3156 12.9268 13.4628 12.5735 12.5735 12.5735H7.5441C6.65485 12.5735 5.80201 12.9268 5.17322 13.5556C4.54442 14.1844 4.19116 15.0372 4.19116 15.9265V17.6029" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0589 9.22059C11.9107 9.22059 13.4118 7.71943 13.4118 5.86765C13.4118 4.01587 11.9107 2.51471 10.0589 2.51471C8.2071 2.51471 6.70593 4.01587 6.70593 5.86765C6.70593 7.71943 8.2071 9.22059 10.0589 9.22059Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="basket.html" class="header__basket">
+                    <span class="header__basket-icon">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4118 8.38235C13.4118 9.27161 13.0586 10.1244 12.4298 10.7532C11.801 11.382 10.9481 11.7353 10.0589 11.7353C9.16962 11.7353 8.31678 11.382 7.68799 10.7532C7.05919 10.1244 6.70593 9.27161 6.70593 8.38235" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.60107 5.05791H17.5166" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.84994 4.58263C2.6323 4.87282 2.51465 5.22578 2.51465 5.58851V16.7647C2.51465 17.2093 2.69128 17.6357 3.00568 17.9501C3.32007 18.2645 3.74649 18.4412 4.19112 18.4412H15.9264C16.371 18.4412 16.7975 18.2645 17.1119 17.9501C17.4263 17.6357 17.6029 17.2093 17.6029 16.7647V5.58851C17.6029 5.22578 17.4852 4.87282 17.2676 4.58263L15.5911 2.34706C15.435 2.13885 15.2325 1.96985 14.9997 1.85346C14.7669 1.73707 14.5102 1.67647 14.2499 1.67647H5.86759C5.60733 1.67647 5.35064 1.73707 5.11785 1.85346C4.88506 1.96985 4.68257 2.13885 4.52641 2.34706L2.84994 4.58263Z" stroke="#0F1F14" stroke-width="1.67647" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="header__basket-number">2</span>
+                </a>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+		<main class="content">
+			<section class="main">
+				<div class="container">
+					<div class="main__inner">
+						<div class="main__subtitle">~ Clean nutrition, clinically dosed ~</div>
+						<h1 class="main__title text72">Supplements <br> worth taking.</h1>
+						<div class="main__text">Whole-food vitamins and targeted formulas, made in small batches and tested independently — so every capsule earns its place in your day.</div>
+						<div class="main__btns">
+							<a href="catalog.html" class="main__btn btn btn-green">
+								<span class="btn-text">Shop bestsellers</span>
+							</a>
+							<a href="catalog.html" class="main__btn2 btn btn-white__outline">
+								<span class="btn-text">View catalog</span>
+								<span class="btn-icon">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.33331 8H12.6666" stroke="#FDFCF7" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="#FDFCF7" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<ul class="main__list">
+							<li>4.9 / 5 · 12 000+ reviews</li>
+							<li>Vegan & non-GMO</li>
+							<li>Made in EU</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="info">
+				<div class="container">
+					<div class="info__inner">
+						<div class="section-top">
+							<div class="subtitle">~ Shop by goal ~</div>
+							<h2 class="info__title text44">What does your body need today?</h2>
+						</div>
+						<div class="info__cards">
+							<a href="catalog.html" class="info-card info-card--orange">
+								<span class="info-card__icon">
+									<img src="img/info-icon.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Protein <br> Bars</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--green">
+								<span class="info-card__icon">
+									<img src="img/info-icon2.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">High Protein Snacks</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--blue">
+								<span class="info-card__icon">
+									<img src="img/info-icon3.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Baking & Cooking</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--pink">
+								<span class="info-card__icon">
+									<img src="img/info-icon4.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Multi<wbr>vitamins</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--blue2">
+								<span class="info-card__icon">
+									<img src="img/info-icon5.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Men's Multivitamins</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--green2">
+								<span class="info-card__icon">
+									<img src="img/info-icon6.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Minerals</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--blue3">
+								<span class="info-card__icon">
+									<img src="img/info-icon7.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Vitamin Packs</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--yellow">
+								<span class="info-card__icon">
+									<img src="img/info-icon8.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Single Vitamins</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+							<a href="catalog.html" class="info-card info-card--violet">
+								<span class="info-card__icon">
+									<img src="img/info-icon9.svg" alt="">
+								</span>
+								<span class="info-card__group">
+									<span class="info-card__title">Fiber</span>
+									<span class="info-card__btn">
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.33331 8H12.6666" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8 3.33337L12.6667 8.00004L8 12.6667" stroke="#0F1F14" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="products">
+				<div class="container">
+					<div class="products__inner">
+						<div class="section-top">
+							<div class="subtitle">~ Bestsellers ~</div>
+							<h2 class="products__title text44">Loved by 40 000 daily routines</h2>
+						</div>
+						<div class="products__cards">
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img.webp" alt="">
+									</a>
+									<div class="product-card__tag new">NEW</div>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Daily Wellness</div>
+									<a href="product%20.html" class="product-card__title">NOW Foods Magnesium Citrate, <span class="inline">120 VCaps</span></a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.9</span>
+											<span>(412)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$8.20</div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img2.webp" alt="">
+									</a>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Sleep & Recovery</div>
+									<a href="product%20.html" class="product-card__title">NOW Foods Effer-C, Box of 30</a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.9</span>
+											<span>(531)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$10.02</div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img3.webp" alt="">
+									</a>
+									<div class="product-card__tag new">NEW</div>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Daily Wellness</div>
+									<a href="product%20.html" class="product-card__title">NOW Foods Magnesium Citrate, <span class="inline">120 VCaps</span></a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.9</span>
+											<span>(412)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$8.20</div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img4.webp" alt="">
+									</a>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Immunity</div>
+									<a href="product%20.html" class="product-card__title">Nutritox Vitamin C, 100 Servings</a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.8</span>
+											<span>(286)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$7.29 <span>€30</span></div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img5.webp" alt="">
+									</a>
+									<div class="product-card__tag discount">-20%</div>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Immunity</div>
+									<a href="product%20.html" class="product-card__title">Myprotein Protein Wafers, Box of 10</a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.8</span>
+											<span>(286)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$11.62 <span>€30</span></div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-card">
+								<div class="product-card__top">
+									<a href="product%20.html" class="product-card__img">
+										<img src="img/product-img6.webp" alt="">
+									</a>
+								</div>
+								<div class="product-card__desc">
+									<div class="product-card__subtitle">Immunity</div>
+									<a href="product%20.html" class="product-card__title">USN Apple Cider Vinegar, 60 Veggie Capsules</a>
+									<div class="stars-wrap">
+										<div class="stars">
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+											<span class="star">
+												<img src="img/star.svg" alt="">
+											</span>
+										</div>
+										<div class="stars-text">
+											<span>4.8</span>
+											<span>(286)</span>
+										</div>
+									</div>
+									<div class="product-card__group">
+										<div class="product-card__price">$11.62 <span>€30</span></div>
+										<button class="product-card__btn btn btn-green2">
+											<span class="btn-icon">
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M2.91663 7H11.0833" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M7 2.91675V11.0834" stroke="#F9FBF4" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+											<span class="btn-text">Add</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products__btn-wrap">
+							<a href="catalog.html" class="products__btn btn btn-beige">
+								<span class="btn-text">MORE</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product">
+				<div class="container">
+					<div class="product__inner">
+						<div class="product__img">
+							<img src="img/product-img7.webp" alt="">
+						</div>
+						<div class="product__desc">
+							<div class="section-top">
+								<div class="subtitle">~ Featured formula ~</div>
+								<h2 class="product__title text44">USN Apple Cider Vinegar, <span class="inline">60 Veggie</span> Capsules</h2>
+							</div>
+							<div class="product__text">
+								Apple Cider Vinegar <br>
+								Apple Cider Vinegar with Cayenne Pepper is made with fermented Apple Cider and supports a wide variety of health benefits. It comes in convenient veggie capsules as opposed to the liquid form.
+							</div>
+							<ul class="product__list">
+								<li>
+									<span>
+										<img src="img/check.svg" alt="">
+									</span>
+									10% discount on all subsequent purchases
+								</li>
+								<li>
+									<span>
+										<img src="img/check.svg" alt="">
+									</span>
+									FREE Shipping Worldwide
+								</li>
+								<li>
+									<span>
+										<img src="img/check.svg" alt="">
+									</span>
+									24x7 Support
+								</li>
+								<li>
+									<span>
+										<img src="img/check.svg" alt="">
+									</span>
+									Participation in the 'Favorite buyer", which gives a 15% discount (when the sum of previous purchases exceed $ 500)
+								</li>
+							</ul>
+							<div class="product__group">
+								<div class="product__price">
+									$12.76
+									<span>€16</span>
+								</div>
+								<button class="product__btn btn btn-green">
+									<span class="btn-text">Add to cart</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="container">
+					<div class="feedback__inner">
+						<div class="section-top">
+							<div class="subtitle">~ Reviews ~</div>
+							<h2 class="feedback__title text44">Real routines, real results</h2>
+						</div>
+						<div class="feedback__cards">
+							<div class="feedback-card">
+								<div class="stars">
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+								</div>
+								<div class="feedback-card__text">“Three weeks in and my afternoon crash is simply gone. The formulas feel genuinely different from anything I've tried.”</div>
+								<div class="feedback-card__user">
+									<div class="feedback-card__user-name">Marta K.</div>
+									<div class="feedback-card__user-text">Daily Multi Complex</div>
+								</div>
+							</div>
+							<div class="feedback-card">
+								<div class="stars">
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+								</div>
+								<div class="feedback-card__text">“Beautiful packaging, but what sold me is the lab report in every box. Full transparency, no marketing noise.”</div>
+								<div class="feedback-card__user">
+									<div class="feedback-card__user-name">Jonas R.</div>
+									<div class="feedback-card__user-text">Vitamin D3 + K2</div>
+								</div>
+							</div>
+							<div class="feedback-card">
+								<div class="stars">
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+									<span class="star">
+										<img src="img/star.svg" alt="">
+									</span>
+								</div>
+								<div class="feedback-card__text">“My skin looks calmer and my sleep is deeper. Worth every cent — I've re-ordered four times now.”</div>
+								<div class="feedback-card__user">
+									<div class="feedback-card__user-name">Alina V.</div>
+									<div class="feedback-card__user-text">Marine Collagen Glow</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="connection">
+				<div class="container">
+					<div class="connection__inner">
+						<div class="section-top">
+							<div class="subtitle">~ Wellness letter ~</div>
+							<h3 class="connection__title text30">One useful email a month. Plus €10 off your first order.</h3>
+						</div>
+						<div class="form-mail">
+							<div class="form-mail__group">
+								<input type="email" placeholder="your@email.com">
+							</div>
+							<button class="form-mail__btn btn btn-green2">
+								<span class="btn-text">Subscribe</span>
+							</button>
+						</div>
+						<div class="form-mail__info">No noise, no spam. Unsubscribe in one click.</div>
+					</div>
+				</div>
+			</section>
+			<section class="partners">
+				<div class="container">
+					<div class="partners__inner">
+						<h3 class="partners__title text30">We work with such companies as:</h3>
+						<div class="partners__cards">
+							<div class="partner-card">
+								<img src="img/partner-img.png" alt="">
+							</div>
+							<div class="partner-card">
+								<img src="img/partner-img2.png" alt="">
+							</div>
+							<div class="partner-card">
+								<img src="img/partner-img3.png" alt="">
+							</div>
+							<div class="partner-card partner-card--jnx">
+								<img src="img/partner-img4.png" alt="">
+							</div>
+							<div class="partner-card">
+								<img src="img/partner-img5.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer-top">
+                <div class="footer__group">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">
+                            <img src="img/logo2.svg" alt="">
+                        </span>
+                        <span class="footer__logo-desc">
+                            <span class="footer__logo-text">premium<span>food</span>supplements</span>
+                            <span class="footer__logo-text2">Nutrition, refined</span>
+                        </span>
+                    </a>
+                    <div class="footer__text">Clean, clinically dosed food supplements made in small European batches.</div>
+                    <a href="tel:+441138418480" class="footer__phone">+44 113 841 8480</a>
+                </div>
+                <div class="footer__items">
+                    <div class="footer__group footer__group--mob">
+                        <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">
+                            <img src="img/logo2.svg" alt="">
+                        </span>
+                            <span class="footer__logo-desc">
+                            <span class="footer__logo-text">premium<span>food</span>supplements</span>
+                            <span class="footer__logo-text2">Nutrition, refined</span>
+                        </span>
+                        </a>
+                        <div class="footer__text">Clean, clinically dosed food supplements made in small European batches.</div>
+                        <a href="tel:+441138418480" class="footer__phone">+44 113 841 8480</a>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">Shop</div>
+                        <ul class="footer__item-list">
+                            <li><a href="catalog.html">Vitamins</a></li>
+                            <li><a href="catalog.html">Supplements</a></li>
+                            <li><a href="catalog.html">Bundles</a></li>
+                            <li><a href="catalog.html">Gift cards</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">Help</div>
+                        <ul class="footer__item-list">
+                            <li><a href="contacts.html">Contact Us</a></li>
+                            <li><a href="refund-policy.html">Return/refund policy</a></li>
+                            <li><a href="delivery-policy.html">Delivery information</a></li>
+                            <li><a href="support.html">Customer Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__item-title">About</div>
+                        <ul class="footer__item-list">
+                            <li><a href="catalog.html">Our story</a></li>
+                            <li><a href="catalog.html">Ingredients</a></li>
+                            <li><a href="catalog.html">Lab reports</a></li>
+                            <li><a href="catalog.html">Journal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer__items2">
+                    <div class="footer__item2">VISA</div>
+                    <div class="footer__item2">MASTERCARD</div>
+                    <div class="footer__item2">visa secure</div>
+                </div>
+                <div class="footer__text2">
+                    <p>© 2026 premiumfoodsupplements</p>
+                    <p><a href="privacy-policy.html">Privacy</a></p>
+                    <p><a href="terms-use.html">Terms</a></p>
+                    <p><a href="terms-use.html">Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+	</div>
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+
+</body>
+
+</html>
